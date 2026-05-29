@@ -1,4 +1,4 @@
-﻿package com.example.tripmind.dto;
+package com.example.tripmind.dto;
 import lombok.Data;
 import java.util.List;
 @Data

@@ -1,4 +1,4 @@
-﻿package com.example.tripmind.controller;
+package com.example.tripmind.controller;
 import com.example.tripmind.dto.LoginRequest;
 import com.example.tripmind.dto.RegisterRequest;
 import com.example.tripmind.model.User;

@@ -1,4 +1,4 @@
-﻿package com.example.tripmind.util;
+package com.example.tripmind.util;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;

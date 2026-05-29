@@ -1,4 +1,4 @@
-﻿package com.example.tripmind.controller;
+package com.example.tripmind.controller;
 import com.example.tripmind.dto.TripRequest;
 import com.example.tripmind.model.Trip;
 import com.example.tripmind.service.TripService;

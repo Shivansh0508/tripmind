@@ -1,4 +1,4 @@
-﻿package com.example.tripmind.service;
+package com.example.tripmind.service;
 import com.example.tripmind.dto.TripRequest;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;

@@ -1,4 +1,4 @@
-﻿package com.example.tripmind.service;
+package com.example.tripmind.service;
 import com.example.tripmind.dto.TripRequest;
 import com.example.tripmind.model.Trip;
 import com.example.tripmind.repository.TripRepository;

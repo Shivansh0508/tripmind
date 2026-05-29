@@ -1,4 +1,4 @@
-﻿package com.example.tripmind.config;
+package com.example.tripmind.config;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

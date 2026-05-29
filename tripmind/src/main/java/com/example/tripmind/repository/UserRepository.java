@@ -1,4 +1,4 @@
-﻿package com.example.tripmind.repository;
+package com.example.tripmind.repository;
 import com.example.tripmind.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
