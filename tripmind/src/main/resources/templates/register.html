@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Register — TripMind</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#050508;--border:rgba(255,255,255,0.08);--text:#f0ede8;--muted:rgba(240,237,232,0.45);--accent:#e8845c;--accent2:#d4a853}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:grid;grid-template-columns:1fr 1fr}
+.bg-mesh{position:fixed;inset:0;z-index:0;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(100px);opacity:0.4}
+.orb1{width:600px;height:600px;background:radial-gradient(circle,rgba(212,168,83,0.2),transparent);top:-100px;left:-200px}
+.orb2{width:500px;height:500px;background:radial-gradient(circle,rgba(232,132,92,0.2),transparent);bottom:-100px;right:-100px}
+
+.left{position:relative;z-index:1;padding:3rem;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--border);overflow:hidden}
+.left-logo{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--text);text-decoration:none;margin-bottom:5rem;display:block}
+.left-logo span{color:var(--accent);font-style:italic}
+.left-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,4vw,4rem);font-weight:600;line-height:1.05;letter-spacing:-0.04em;margin-bottom:1.5rem}
+.left-title em{font-style:italic;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.left-sub{font-size:0.95rem;line-height:1.7;color:var(--muted);font-weight:300;max-width:380px}
+.feature-list{margin-top:3rem;display:flex;flex-direction:column;gap:0.8rem}
+.f-item{display:flex;align-items:center;gap:0.8rem;font-size:0.83rem;color:var(--muted)}
+.f-check{width:20px;height:20px;border-radius:50%;background:rgba(232,132,92,0.15);border:1px solid rgba(232,132,92,0.3);display:flex;align-items:center;justify-content:center;font-size:0.65rem;color:var(--accent);flex-shrink:0}
+
+.right{position:relative;z-index:1;padding:3rem;display:flex;align-items:center;justify-content:center}
+.form-box{width:100%;max-width:400px;animation:fadeUp 0.5s ease both}
+.form-eyebrow{font-size:0.72rem;color:var(--accent);letter-spacing:0.18em;text-transform:uppercase;font-weight:600;margin-bottom:0.8rem}
+.form-title{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;letter-spacing:-0.03em;margin-bottom:0.5rem}
+.form-sub{font-size:0.85rem;color:var(--muted);margin-bottom:2.5rem;font-weight:300}
+.form-sub a{color:var(--accent);text-decoration:none;font-weight:500}
+.form-group{margin-bottom:1.2rem}
+.form-label{display:block;font-size:0.78rem;color:var(--muted);margin-bottom:0.4rem}
+.form-input{width:100%;padding:0.9rem 1rem;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:0.6rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;color:var(--text);outline:none;transition:all 0.2s}
+.form-input::placeholder{color:rgba(240,237,232,0.2)}
+.form-input:focus{border-color:rgba(232,132,92,0.5);background:rgba(255,255,255,0.08);box-shadow:0 0 0 3px rgba(232,132,92,0.08)}
+.btn-submit{width:100%;padding:0.95rem;background:linear-gradient(135deg,var(--accent),#c4622d);color:#fff;border:none;border-radius:0.6rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;font-weight:600;cursor:pointer;transition:all 0.3s;box-shadow:0 4px 25px rgba(232,132,92,0.3);letter-spacing:0.01em;margin-top:0.5rem}
+.btn-submit:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(232,132,92,0.45)}
+.error-msg{background:rgba(232,132,92,0.1);border:1px solid rgba(232,132,92,0.25);border-radius:0.5rem;padding:0.7rem 1rem;font-size:0.83rem;color:var(--accent);margin-bottom:1.2rem}
+.success-msg{background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.2);border-radius:0.5rem;padding:0.7rem 1rem;font-size:0.83rem;color:#4ade80;margin-bottom:1.2rem}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="bg-mesh"><div class="orb orb1"></div><div class="orb orb2"></div></div>
+<div class="left">
+  <a href="/" class="left-logo">Trip<span>Mind</span></a>
+  <h2 class="left-title">Every journey<br/>begins with<br/><em>one plan.</em></h2>
+  <p class="left-sub">Join TripMind and let AI craft your perfect itinerary — tailored to your family, budget, and taste.</p>
+  <div class="feature-list">
+    <div class="f-item"><div class="f-check">✓</div> AI-generated day-by-day itineraries</div>
+    <div class="f-item"><div class="f-check">✓</div> Real hotels, restaurants & costs in INR</div>
+    <div class="f-item"><div class="f-check">✓</div> Redis-cached for instant repeat searches</div>
+    <div class="f-item"><div class="f-check">✓</div> All trips saved to your personal dashboard</div>
+  </div>
+</div>
+<div class="right">
+  <div class="form-box">
+    <div class="form-eyebrow">New account</div>
+    <h1 class="form-title">Create account</h1>
+    <p class="form-sub">Already have one? <a th:href="@{/login}">Sign in</a></p>
+    <div th:if="${error}" class="error-msg" th:text="${error}"></div>
+    <div th:if="${success}" class="success-msg" th:text="${success}"></div>
+    <form th:action="@{/register}" method="post">
+      <div class="form-group">
+        <label class="form-label">Full name</label>
+        <input type="text" name="name" class="form-input" placeholder="Shivansh Saxena" required/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email address</label>
+        <input type="email" name="email" class="form-input" placeholder="you@example.com" required/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Password</label>
+        <input type="password" name="password" class="form-input" placeholder="Min. 8 characters" required/>
+      </div>
+      <button type="submit" class="btn-submit">Create account →</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
