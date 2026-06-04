@@ -93,3 +93,16 @@ cp src/main/resources/application.properties.example src/main/resources/applicat
 # Run the application
 ./mvnw spring-boot:run
 ```
+
+### Environment Variables
+ 
+```properties
+spring.data.mongodb.uri=mongodb://localhost:27017/tripmind
+spring.data.redis.host=localhost
+spring.data.redis.port=6379
+app.jwt.secret=your-secret-key
+app.jwt.expiration=86400000
+openrouter.api.key=your-openrouter-key
+```
+ 
+---
