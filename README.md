@@ -116,4 +116,20 @@ openrouter.api.key=your-openrouter-key
 7. **Display** → Beautiful itinerary shown with day-by-day breakdown
 ---
  
----
+## Project Structure
+ 
+```
+src/main/java/com/example/tripmind/
+├── config/          # Security, Redis configuration
+├── controller/      # REST API + page controllers
+├── dto/             # Request/Response data classes
+├── model/           # MongoDB document models
+├── repository/      # Database query interfaces
+├── service/         # Business logic (AI, Trip, etc.)
+└── util/            # JWT utility
+ 
+src/main/resources/
+├── templates/       # Thymeleaf HTML pages
+└── application.properties
+```
+ 
