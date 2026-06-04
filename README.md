@@ -47,4 +47,27 @@
              └──────────┘ └─────────┘ └──────────┘    
 ```
  
+## API Endpoints
+ 
+### Authentication
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/auth/register` | Register new user |
+| POST | `/api/auth/login` | Login and get JWT token |
+ 
+### Trips
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/trips` | Create new AI-generated trip |
+| GET | `/api/trips` | Get all trips for logged-in user |
+| DELETE | `/api/trips/{id}` | Delete a trip |
+ 
+### Pages
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/` | Landing page |
+| GET | `/plan` | Trip planning form |
+| GET | `/my-trips` | User dashboard |
+| GET | `/trips/{id}` | View specific itinerary |
+ 
 ---
