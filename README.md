@@ -6,7 +6,7 @@
  
 ---
 
-## Features
+## Features 
  
 - **AI Itinerary Generation** - Real AI generates complete day-by-day travel plans based on your cities, budget, family size, and food preferences
 - **JWT Authentication** - Secure user registration and login with industry-standard JWT tokens
