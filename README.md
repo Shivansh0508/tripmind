@@ -1,4 +1,4 @@
-# TripMind — AI-Powered Travel Itinerary Planner
+# TripMind - AI-Powered Travel Itinerary Planner
  
 > Plan your perfect trip in seconds with AI-generated day-by-day itineraries, real hotel & restaurant recommendations, and personalized cost estimates in INR.
  
@@ -8,12 +8,12 @@
 
 ## Features
  
-- **AI Itinerary Generation** — Real AI generates complete day-by-day travel plans based on your cities, budget, family size, and food preferences
-- **JWT Authentication** — Secure user registration and login with industry-standard JWT tokens
-- **Redis Caching** — Popular routes cached for instant responses (reduced latency from ~3s to <50ms)
-- **MongoDB Storage** — All user profiles and trip itineraries persisted in MongoDB
-- **REST APIs** — Full RESTful backend with documented endpoints
-- **CI/CD Pipeline** — Automated builds and deployments via GitHub Actions + Railway
+- **AI Itinerary Generation** - Real AI generates complete day-by-day travel plans based on your cities, budget, family size, and food preferences
+- **JWT Authentication** - Secure user registration and login with industry-standard JWT tokens
+- **Redis Caching** - Popular routes cached for instant responses (reduced latency from ~3s to <50ms)
+- **MongoDB Storage** - All user profiles and trip itineraries persisted in MongoDB
+- **REST APIs** - Full RESTful backend with documented endpoints
+- **CI/CD Pipeline** - Automated builds and deployments via GitHub Actions + Railway
 ---
 
 ## Tech Stack
@@ -141,7 +141,7 @@ src/main/resources/
            key = "#req.cities + '_' + #req.numberOfDays + '_' + #req.budgetLevel")
 public String generateItinerary(TripRequest req) { ... }
 ```
-Same city+days+budget combination returns from cache — zero AI API calls after first request.
+Same city+days+budget combination returns from cache - zero AI API calls after first request.
  
 **JWT Authentication Flow**
 - Passwords stored as BCrypt hashes
@@ -160,7 +160,7 @@ Same city+days+budget combination returns from cache — zero AI API calls after
 
 ## Built By
  
-**Shivansh Saxena** — B.Tech Computer Science, BITS Pilani (2027)
+**Shivansh Saxena** - B.Tech Computer Science, BITS Pilani (2027)
  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/shivansh-saxena-8b9880316/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-black)](https://github.com/Shivansh0508)
@@ -169,4 +169,4 @@ Same city+days+budget combination returns from cache — zero AI API calls after
 
 ## License
  
-MIT License — feel free to use this project for learning and portfolio purposes.
+MIT License - feel free to use this project for learning and portfolio purposes.
