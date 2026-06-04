@@ -132,4 +132,22 @@ src/main/resources/
 ├── templates/       # Thymeleaf HTML pages
 └── application.properties
 ```
+
+ ## Key Technical Highlights
  
+**Redis Caching Strategy**
+```java
+@Cacheable(value = "itineraries",
+           key = "#req.cities + '_' + #req.numberOfDays + '_' + #req.budgetLevel")
+public String generateItinerary(TripRequest req) { ... }
+```
+Same city+days+budget combination returns from cache — zero AI API calls after first request.
+ 
+**JWT Authentication Flow**
+- Passwords stored as BCrypt hashes
+- JWT tokens expire after 24 hours
+- Stateless session management (STATELESS policy)
+**MongoDB Document Design**
+- `users` collection: email, hashed password, saved trip IDs
+- `trips` collection: userId (FK), cities, preferences, AI-generated itinerary
+---
