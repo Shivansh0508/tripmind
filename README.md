@@ -15,3 +15,18 @@
 - **REST APIs** — Full RESTful backend with documented endpoints
 - **CI/CD Pipeline** — Automated builds and deployments via GitHub Actions + Railway
 ---
+
+## Tech Stack
+ 
+| Layer | Technology |
+|-------|-----------|
+| Backend | Java 17, Spring Boot 3.5 |
+| Database | MongoDB (Spring Data MongoDB) |
+| Cache | Redis (Spring Cache) |
+| Auth | JWT (jjwt 0.11.5) |
+| AI | OpenRouter API (Mistral) |
+| Frontend | Thymeleaf, HTML5, CSS3 |
+| Deployment | Railway, Docker |
+| Version Control | Git, GitHub |
+ 
+---
