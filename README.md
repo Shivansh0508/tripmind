@@ -71,3 +71,11 @@
 | GET | `/trips/{id}` | View specific itinerary |
  
 ---
+
+## Getting Started
+ 
+### Prerequisites
+- Java 17+
+- MongoDB (local or Atlas)
+- Redis
+- Maven
