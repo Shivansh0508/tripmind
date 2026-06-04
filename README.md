@@ -151,3 +151,9 @@ Same city+days+budget combination returns from cache — zero AI API calls after
 - `users` collection: email, hashed password, saved trip IDs
 - `trips` collection: userId (FK), cities, preferences, AI-generated itinerary
 ---
+
+## Screenshots
+ 
+> Register → Plan → AI generates → View itinerary → Save to dashboard
+ 
+---
