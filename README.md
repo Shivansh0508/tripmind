@@ -152,11 +152,6 @@ Same city+days+budget combination returns from cache - zero AI API calls after f
 - `trips` collection: userId (FK), cities, preferences, AI-generated itinerary
 ---
 
-## Screenshots
- 
-> Register → Plan → AI generates → View itinerary → Save to dashboard
- 
----
 
 ## Built By
  
