@@ -104,5 +104,16 @@ app.jwt.secret=your-secret-key
 app.jwt.expiration=86400000
 openrouter.api.key=your-openrouter-key
 ```
+
+## How It Works
+ 
+1. **User registers/logs in** → JWT token issued
+2. **User fills trip form** → cities, days, family size, budget, food preference
+3. **Cache check** → Redis checks if same query was made before
+4. **AI generation** → If not cached, OpenRouter AI generates full itinerary
+5. **Cache store** → Response cached in Redis for 24 hours
+6. **MongoDB save** → Trip saved to user's profile
+7. **Display** → Beautiful itinerary shown with day-by-day breakdown
+---
  
 ---
