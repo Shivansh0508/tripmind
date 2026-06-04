@@ -79,3 +79,17 @@
 - MongoDB (local or Atlas)
 - Redis
 - Maven
+### Installation
+ 
+```bash
+# Clone the repository
+git clone https://github.com/Shivansh0508/tripmind.git
+cd tripmind/tripmind
+ 
+# Set environment variables
+cp src/main/resources/application.properties.example src/main/resources/application.properties
+# Edit application.properties with your keys
+ 
+# Run the application
+./mvnw spring-boot:run
+```
