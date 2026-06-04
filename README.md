@@ -164,4 +164,4 @@ Same city+days+budget combination returns from cache - zero AI API calls after f
 
 ## License
  
-MIT License - feel free to use this project for learning and portfolio purposes.
+MIT License - feel free to use this project for learning.
